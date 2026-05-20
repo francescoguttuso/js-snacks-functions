@@ -10,9 +10,18 @@ const name = 'Mario';
 
 // Dichiara la funzione qui.
 
+function saluto (parola) {
+    const ora = new Date().getHours(); // Cattura l'ora del sistema
+  let saluto = "";                   
+
+  if (ora <= 13) {saluto = "buongiorno"}
+    else if (ora > 13 && ora <= 17) {saluto = "Buon Pomeriggio"}
+    else {saluto = "Buonasera"}
+return `${saluto} ${parola}`;
+}
 
 // Invoca la funzione qui e stampa il risultato in console
-
+console.log(saluto(name));
 
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
